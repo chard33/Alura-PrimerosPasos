@@ -12,14 +12,12 @@
 			
 			function saltarLinea(){
 
-				document.write("<br>");
+				document.write("<br><br><br><hr><br><br>");
 			}
 
-			function imprimir(edad1, edad2){
+			function imprimir(frase){
 
-				let diferencia = edad1 - edad2;
-
-				document.write(`Nuestra diferencia de edad es: ${diferencia}`);
+				document.write(frase);
 			}
 
 			let edad1 = 20, edad2 = 15;
@@ -32,7 +30,7 @@
 
 			saltarLinea();
 
-			imprimir(edad1, edad2);
+			imprimir(`<big>Nuestra diferencia de edad es: ${edad1 - edad2}<big>`);
 
 		</script>
 	</body>
