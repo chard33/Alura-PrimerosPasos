@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>Cálculo diferencia de edades</title>
+	</head>
+	<body>
+
+		<h2>Calculo</h2>
+
+		<script type="text/javascript">
+			
+			function saltarLinea(){
+
+				document.write("<br>");
+			}
+
+			function imprimir(edad1, edad2){
+
+				let diferencia = edad1 - edad2;
+
+				document.write(`Nuestra diferencia de edad es: ${diferencia}`);
+			}
+
+			let edad1 = 20, edad2 = 15;
+
+			document.write(`Mi edad es: ${edad1}`);
+
+			saltarLinea();
+
+			document.write(`La edad de mi hermano es: ${edad2}`);
+
+			saltarLinea();
+
+			imprimir(edad1, edad2);
+
+		</script>
+	</body>
+</html>
