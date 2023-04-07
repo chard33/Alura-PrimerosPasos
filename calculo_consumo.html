@@ -13,11 +13,16 @@
 		
 		const tanque = 40, kilometrajeGasolina = 480, kilometrajeAlcohol = 300;
 
-		let calculoGasolina = kilometrajeGasolina / tanque,
-			calculoAlcohol = kilometrajeAlcohol / tanque;
+			let calculoGasolina = kilometrajeGasolina / tanque,
+				calculoAlcohol = kilometrajeAlcohol / tanque;
 
-		document.write(`Eficiencia del carro usando gasolina: ${calculoGasolina}<br>`);
-		document.write(`Eficiencia del carro usando alcohol: ${calculoAlcohol}`);
+			resultados(calculoGasolina, calculoAlcohol);
+
+		function resultados(calculoGasolina, calculoAlcohol){
+
+			document.write(`Eficiencia del carro usando gasolina: ${calculoGasolina}<br>`);
+			document.write(`Eficiencia del carro usando alcohol: ${calculoAlcohol}`);
+		}
 
 	</script>
 </body>
