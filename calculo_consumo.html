@@ -10,13 +10,6 @@
 	<h3>¿Alcohol o gasolina?</h3>
 
 	<script type="text/javascript">
-		
-		const tanque = 40, kilometrajeGasolina = 480, kilometrajeAlcohol = 300;
-
-			let calculoGasolina = kilometrajeGasolina / tanque,
-				calculoAlcohol = kilometrajeAlcohol / tanque;
-
-			resultados(calculoGasolina, calculoAlcohol);
 
 		function resultados(calculoGasolina, calculoAlcohol){
 
@@ -24,6 +17,13 @@
 			document.write(`Eficiencia del carro usando alcohol: ${calculoAlcohol}`);
 		}
 
+		const tanque = 40, kilometrajeGasolina = 480, kilometrajeAlcohol = 300;
+
+		let calculoGasolina = kilometrajeGasolina / tanque,
+				calculoAlcohol = kilometrajeAlcohol / tanque;
+
+		resultados(calculoGasolina, calculoAlcohol);
+		
 	</script>
 </body>
 </html>
