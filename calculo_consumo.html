@@ -1,0 +1,24 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculo del consumo</title>
+</head>
+<body>
+	<h3>¿Alcohol o gasolina?</h3>
+
+	<script type="text/javascript">
+		
+		const tanque = 40, kilometrajeGasolina = 480, kilometrajeAlcohol = 300;
+
+		let calculoGasolina = kilometrajeGasolina / tanque,
+			calculoAlcohol = kilometrajeAlcohol / tanque;
+
+		document.write(`Eficiencia del carro usando gasolina: ${calculoGasolina}<br>`);
+		document.write(`Eficiencia del carro usando alcohol: ${calculoAlcohol}`);
+
+	</script>
+</body>
+</html>
