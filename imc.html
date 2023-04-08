@@ -32,7 +32,10 @@
 			return (imc1 + imc2) / 2;
 		}
 
-		imprimir(`El promedio de los IMC es: ${promedioIMC(calcularIMC(70, 1.71), calcularIMC(60, 1.58))}`);
+		peso = prompt("Ingrese su peso:");
+		altura = prompt("Ingrese su altura:");
+
+		imprimir(`El promedio de los IMC es: ${promedioIMC(calcularIMC(peso, altura), calcularIMC(60, 1.58))}`);
 
 	</script>
 </body>
