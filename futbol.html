@@ -18,6 +18,7 @@
 		function imprimir (frase) {
 			
 			document.write(frase);
+			saltoLinea();
 		}
 
 		var victorias = parseInt(prompt("Cantidad de victorias")), 
@@ -26,6 +27,17 @@
 		    puntosTotal = victorias * 3 + empates;
 
 		imprimir(`El total de puntos del equipo de ${nombre} es: ${puntosTotal}`);
+
+		if (puntosTotal > 28) {
+
+			imprimir("El equipo esta MEJOR que el año pasado.");
+		}else if (puntosTotal < 28) {
+			
+			imprimir("El equipo esta PEOR que el año pasado.");
+		}else {
+			
+			imprimir("El equipo esta IGUAL que el año pasado.");
+		}
 	</script>
 </body>
 </html>
