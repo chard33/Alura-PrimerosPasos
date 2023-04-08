@@ -1,4 +1,3 @@
-<!doctype html>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +6,7 @@
 	<title>Calculo del IMC</title>
 </head>
 <body>
+	
 	<h1>PROGRAMA CALCULAR IMC</h1>
 
 	<script type="text/javascript">
@@ -32,8 +32,8 @@
 			return (imc1 + imc2) / 2;
 		}
 
-		peso = prompt("Ingrese su peso:");
-		altura = prompt("Ingrese su altura:");
+		peso = parseFloat(prompt("Ingrese su peso:"));
+		altura = parseFloat(prompt("Ingrese su altura:"));
 
 		imprimir(`El promedio de los IMC es: ${promedioIMC(calcularIMC(peso, altura), calcularIMC(60, 1.58))}`);
 
