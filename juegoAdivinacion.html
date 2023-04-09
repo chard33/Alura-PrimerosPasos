@@ -17,18 +17,38 @@
 		function imprimir (frase) {
 			
 			document.write(frase); 
+			saltoLinea();
 		}
 
-		const numeroPensado = Math.round(Math.random() * 10);
-		let numeroLanzado = parseInt(prompt("Ingrese un numero en 0-10:"));
-
-		if(numeroLanzado == numeroPensado){
-
-			imprimir("Usted acerto");
-		}else{
-
-			imprimir(`Usted erro, el numero pensado era: ${numeroPensado}`);
+		function sorteo (limite) {
+			
+			return  Math.round(Math.random() * limite)
 		}
+
+		function adivinacion (numeroPensado, numeroLanzado) {
+			
+			if(numeroLanzado == numeroPensado){
+
+				imprimir("Usted acerto");
+			}else{
+
+				imprimir(`Usted erro, el numero pensado era: ${numeroPensado}`);
+
+				if(numeroPensado > numeroLanzado){
+
+					imprimir("El numero pensado era MAYOR");
+				}else{
+
+					imprimir("El numero pensado era MENOR");
+				}
+			}
+		}
+
+		let = limite = parseInt(prompt("Ingrese un numero:"));
+		const numeroPensado = sorteo(limite);
+		let numeroLanzado = parseInt(prompt(`Ingrese un numero en 0-${limite}:`));
+
+		adivinacion(numeroPensado, numeroLanzado);
 	</script>
 </body>
 </html>
