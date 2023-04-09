@@ -32,10 +32,32 @@
 			return (imc1 + imc2) / 2;
 		}
 
-		peso = parseFloat(prompt("Ingrese su peso:"));
-		altura = parseFloat(prompt("Ingrese su altura:"));
+		function calculoSobrepeso (imc) {
+			
+			if (imc < 18.5) {
+			 	
+				imprimir("Bajo recomendado");
+			}else if (imc >= 18.5 && imc < 25) {
+				
+				imprimir("IMC dentro de lo normal");
+			}else if (imc >= 25 && imc < 30) {
+				
+				imprimir("IMC considerado como sobrepeso");
+			}else {
+				
+				imprimir("IMC considerado como obesidad");
+			}
+		}
+
+		nombre = prompt("Ingrese su nombre:");
+		peso = parseFloat(prompt(`${nombre}, ingrese su peso:`));
+		altura = parseFloat(prompt(`${nombre}, ingrese su altura:`));
+
+		imprimir(`${nombre}, su IMC calculado es: ${Math.round(calcularIMC(peso, altura) * 100) / 100}`)
 
 		imprimir(`El promedio de los IMC es: ${promedioIMC(calcularIMC(peso, altura), calcularIMC(60, 1.58))}`);
+
+		calculoSobrepeso(calcularIMC(peso, altura));
 
 	</script>
 </body>
