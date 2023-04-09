@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Puedo conducir</title>
+</head>
+<body>
+	<h1>Puedo conducir</h1>
+
+	<script>
+		
+		function saltoLinea () {
+			
+			document.write("<br><br><br>");
+		}
+
+		function imprimir(frase) {
+        	document.write(frase);
+        	saltoLinea();
+    	}
+
+    	function puedeConducir (edad, tieneLicencia) {
+    		
+    		if(edad >= 18 && tieneLicencia == "S"){
+
+    			imprimir("Puedes conducir");
+    		}else{
+
+    			imprimir("No puedes conducir");
+    		}
+    	}
+
+    	var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    	var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    	puedeConducir(edad, tieneLicencia.toUpperCase());
+	</script>
+</body>
+</html>
