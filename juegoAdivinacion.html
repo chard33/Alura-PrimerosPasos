@@ -25,30 +25,55 @@
 			return  Math.round(Math.random() * limite)
 		}
 
-		function adivinacion (numeroPensado, numeroLanzado) {
+		function adivinacion (numeroPensado, numeroLanzado, intento) {
 			
+			let val;
+
 			if(numeroLanzado == numeroPensado){
 
-				imprimir("Usted acerto");
+				imprimir(`Usted acerto en el intento ${intento}, el numero pensado era: ${numeroPensado}`);
+				val = true;
 			}else{
 
-				imprimir(`Usted erro, el numero pensado era: ${numeroPensado}`);
+				alert("Usted erro");
 
 				if(numeroPensado > numeroLanzado){
 
-					imprimir("El numero pensado era MAYOR");
+					alert("El numero pensado era MAYOR");
 				}else{
 
-					imprimir("El numero pensado era MENOR");
+					alert("El numero pensado era MENOR");
 				}
+				val =  false;
 			}
+
+			return val;
 		}
 
-		let = limite = parseInt(prompt("Ingrese un numero:"));
+		let limite = parseInt(prompt("Ingrese un numero:")), numeroLanzado;
 		const numeroPensado = sorteo(limite);
-		let numeroLanzado = parseInt(prompt(`Ingrese un numero en 0-${limite}:`));
 
-		adivinacion(numeroPensado, numeroLanzado);
+		let intentos = 1;
+
+		while(intentos < 3){
+
+			numeroLanzado = parseInt(prompt(`Ingrese un numero en 0-${limite}:`));
+
+			if(adivinacion(numeroPensado, numeroLanzado, intentos)){
+				break;
+			}
+
+			intentos++;
+		}
+
+		if(!adivinacion(numeroPensado, numeroLanzado, intentos)){
+
+			imprimir(`Usted erro, el numero pensado era: ${numeroPensado}`);
+		}else{
+
+			imprimir("Fin");
+		}
+
 	</script>
 </body>
 </html>
