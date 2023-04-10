@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Impresion estrellas</title>
+</head>
+<body>
+	<h1>Estrellas</h1>
+
+	<script>
+		function saltoLinea () {
+			
+			document.write("<br><br><br>");
+		}
+
+		function imprimir (frase) {
+			
+			document.write(frase); 
+			saltoLinea();
+		}
+
+		let tamanho = parseInt(prompt("Ingresa la altura: "));
+
+		for (var i = 0; i < tamanho; i++) {
+			for (var j = 0; j < 10; j++) {
+				document.write("*");
+			} 
+			document.write("<br>");
+		}
+
+		saltoLinea();
+
+		imprimir("Fin");
+
+	</script>
+</body>
+</html>
